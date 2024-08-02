@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function FunctionCall(){
+            let position = document.getElementById("position").value;
+            let newEl = document.getElementById("newEl").value;
+            newEl = parseInt(newEl);
+            let numbers = [22,33,44,55,66,77];
+            console.log(numbers)
+            for(let i = numbers.length -1 ; i>=0 ; i--){
+                if(i>=position){
+                    numbers[i+1] = numbers[i];
+                    if(i == position){
+                        numbers[i] = newEl;
+                    }
+                }
+            }
+            console.log(numbers)
+
+
+
+
+        }
+    </script>
+
+    <input type="number" id="position" placeholder="Position" />
+    <input type="number" id="newEl" placeholder="New Value"/>
+    <button onclick="FunctionCall()">Submit</button>
+
+    
+</body>
+</html>
