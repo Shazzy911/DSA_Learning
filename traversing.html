@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="element" />
+    <button onclick="myFunction()" >Click me</button>
+
+
+    <script>
+
+        
+        
+        const numbers = [22, 34, 88, 13, 52, 97, 92 , 12, 42, 65,34 ];
+        
+        for(let i = 0; i < numbers.length; i++){
+          document.write(`Index ${i} value is ${numbers[i]} <br>`);
+        }
+        function myFunction(){
+
+            const el = document.getElementById("element").value;
+
+            if (el< numbers.length && typeof parseInt(el)=== "number") {
+                
+                alert(numbers[el]);
+            } else {
+                alert("Invalid Value");
+            }
+        }
+        
+        
+
+    </script>
+</body>
+</html>
