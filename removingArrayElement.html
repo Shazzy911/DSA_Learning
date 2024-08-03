@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        function  RemoveEl(){
+            let index = document.getElementById("index").value;
+            index = parseInt(index);
+            let numbers = [22,33, 44, 55, 66, 77, 88];
+            console.log(numbers);
+
+            for(let i = index ; i < numbers.length-1; i++){
+                numbers[i]= numbers[i+1];    // If the index is 2 it will remove 44 and loop start from index 2 
+            }                             // At the index 2 value 55 take place and so on values changes there index.
+            numbers.length = numbers.length-1;
+            console.log(numbers);
+
+        }
+
+    </script>
+
+
+    <input type="number" id="index" placeholder="Remove Index" />
+    <button onclick="RemoveEl()">Remove Item</button>
+
+
+</body>
+</html>

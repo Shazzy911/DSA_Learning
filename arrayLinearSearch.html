@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+
+            function searchIndex(){
+                let target = document.getElementById("target").value;
+                let numbers = [11,22,33,44,55,66,77,88,99];
+                let index = undefined;
+                for(let i = 0; i<numbers.length; i++){
+                    if(numbers[i]=== parseInt(target)){
+                        index = i;
+                    }
+                }
+
+                console.log(index);
+
+
+            }
+        </script>
+
+
+    <input type="number" id="target" placeholder="Enter Number" />
+    <button onclick="searchIndex()">Search Index</button>
+</body>
+</html>
