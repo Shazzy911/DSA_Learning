@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let data1 = [11,22,33,44,55,66,77];
+        let data2 = [10,20,30,40,50,60,70];
+        let data3 = [100,200,300,400,500];
+        let data4 = [434,345,245,63294,29452, 234, 24523];
+        let mainArray= [];
+        for(let i = 0; i < data1.length; i++){
+
+            mainArray[i] = data1[i];
+
+        }
+        for(let i = 0; i< data2.length; i++){
+            mainArray[data1.length + i] = data2[i];
+        }
+        for(let i = 0; i< data3.length; i++){
+            mainArray[data1.length + data2.length + i] = data3[i]
+        }
+        for(let i = 0; i< data4.length; i++){
+            mainArray[data1.length + data2.length + data3.length + i] = data4[i]
+        }
+
+        console.log(mainArray);
+
+    </script>
+    
+</body>
+</html>
