@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CheckApple(){
+
+            let totalApple = 0;
+            let price = document.getElementById("price").value;
+            let money = document.getElementById("money").value;
+            
+            function buyApple(x){
+                if (x>0) {
+                    console.log("I have a total of ", x , " Rupees ", totalApple, "  Apple..");
+                    buyMore(x);
+                } else {
+                    console.log("Don't have enough money to buy Apple, total Apple purchased  ", totalApple);
+                }
+            };
+            function buyMore(x){
+                totalApple++;
+                buyApple(x-price);
+            };
+            buyApple(money)
+
+
+        }
+    </script>
+
+    <input type="number" id="money" placeholder="Money">
+    <input type="number" id="price" placeholder="Price">
+    <button onclick="CheckApple()">Find Answer</button>
+
+
+</body>
+</html>
