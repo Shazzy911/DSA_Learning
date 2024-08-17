@@ -1,0 +1,57 @@
+<!-- Recursion baar baar aik function ko call krta ha, aur loop ma convert ho jaata ha... -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Debugger...
+
+
+        // function functionFour(x){
+        //     console.log(x);
+        // }
+
+        // function functionThree(x){
+        //     functionFour(x);
+        // }
+        // function functionTwo(x){
+        //     functionThree(x);
+        // }
+        // function functionOne(){
+        //     let mydata = "Inside Function Four";
+        //     functionTwo(mydata);
+        // }
+        // function MainFunction (){
+        //     functionOne();
+        // }
+        // MainFunction();
+
+        // Head & tail Recursion function
+
+
+        function test (x){
+
+            console.log(x);
+
+
+            if(x>0){
+                test(x-1);
+            }
+
+            console.log(x)
+        }
+
+        test(5);
+    </script>
+
+
+    <h1>Head & Tail Recursion</h1>
+</body>
+</html>
