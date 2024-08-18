@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let maxSize = 8;
+
+      function push() {
+        let newEl = document.getElementById("newEl").value;
+        if (currentSize > maxSize) {
+          console.log("Stack is full cannot add new Value " + newEl);
+        } else {
+          data[currentSize] = newEl;
+          currentSize += 1;
+          console.log("New Element is Added");
+          document.getElementById("newEl").value = "";
+        }
+      }
+      function pop(){
+        if(currentSize > 0){
+            currentSize-=1;
+            data.length = currentSize;
+            console.log("Element is Removed from Stack")
+        }else{
+            console.log("Stack is empty cannot Remove element");
+        }
+      }
+
+      function display(){
+
+        for(let i = 0; i < data.length ; i++){
+            console.log("element ", [i], " Index Value is ", data[i]);
+        }
+      }
+    </script>
+    <main>
+      <h1>Stack with inputs</h1>
+
+      <input type="number" placeholder="Enter New Element" id="newEl" />
+      <button onClick="push()">Adding Element</button>
+      <button onClick="pop()">Removing Element</button>
+      <button onClick="display()">Displaying Element</button>
+    </main>
+  </body>
+</html>
