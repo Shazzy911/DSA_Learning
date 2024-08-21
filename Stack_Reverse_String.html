@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Reverse String with Stacks</h1>
+    <script>
+        let data = [];   ///  Intializiation of Stacks...
+        let currentSize = data.length;
+
+        function push(newEl){
+            data[currentSize] = newEl;
+            currentSize+=1;
+        }
+        function pop(){
+            let lastRemovedItem = data[currentSize -1]; 
+            currentSize-=1;
+            data.length = currentSize;
+            return lastRemovedItem;
+        }
+        function reverseFunction (item){
+            for(let i = 0; i < item.length; i++){
+                push(item[i])
+            }
+            for(let i = 0; i < item.length; i++){
+                item[i] = pop();
+            
+            }
+
+        }
+
+        let str = "Shahzaib";
+        str = str.split("");
+        reverseFunction(str);
+        console.log(str.join(''));
+
+
+    </script>
+</body>
+</html>
