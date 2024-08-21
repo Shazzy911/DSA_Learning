@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Stack with Class</h1>
+
+        <script>
+            class Stack{
+
+                data = [];
+                currentSize;
+                maxSize;
+                constructor(size){
+                    this.maxSize = size;
+                    this.currentSize = this.data.length;
+                }
+                push(newVal){
+                    if(this.currentSize >  this.maxSize){
+                        console.log("Stack is full Cannot add new Value");
+                    }else{
+                        this.data[this.currentSize] = newVal;
+                        this.currentSize++;
+                    }
+                }
+                pop(){
+                    if(this.currentSize > 0){
+                        this.currentSize -=1;
+                        this.data.length = this.currentSize;
+                    }else{
+                        console.log("Stack is empty cannot remove element");
+                    }
+                }
+                display(){
+                    console.log(this.data)
+                }
+            }
+
+            str = new Stack(5);
+            str.push(55);
+            str.push(23);
+            str.push(98);
+            str.display()
+            str.pop();
+            str.display()
+
+
+        </script>
+
+
+
+</body>
+</html>
