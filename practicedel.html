@@ -6,28 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="value" placeholder="value" />
-    <input type="text" id="index" placeholder="index" />
-    <button onclick="submit()">Click me</button>
-
     <script>
-      const numbers = [12, 93, 52, 25, 23, 63, 4, 84, 234, 83, 68];
-      console.log(numbers);
+      let array1 = [11, 22, 33, 44, 55, 66, 77, 88];
+      let index = 2;
 
-      function submit() {
-        const index = document.getElementById("index").value;
-        const value = document.getElementById("value").value;
-
-        for (let i = numbers.length - 1; i > 0; i--) {
-          if (i > index) {
-            numbers[i + 1] = numbers[i];
-            if (i === index) {
-              numbers[i] = value;
-            }
-          }
-        }
-        console.log(numbers);
+      for (let i = index; i < array1.length - 1; i--) {
+        array1[index] = array1[index + 1];
       }
+
+      array1.length = array1.length - 1;
+
+      console.log(array1);
     </script>
   </body>
 </html>
