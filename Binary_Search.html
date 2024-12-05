@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let unSortedArray = [
+        12, 34, 56, 78, 90, 123, 456, 789, 101, 202, 303, 404, 505, 606, 707,
+        808, 909, 111, 222, 333, 444, 555, 666, 777, 888, 999, 1234, 4567, 7890,
+        1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999, 1000, 2000, 3000,
+        4000, 5000, 6000, 7000, 8000, 9000, 1122, 2233, 3344, 4455, 5566, 6677,
+        7788, 8899, 1212, 2323, 3434, 4545, 5656, 6767, 7878, 8989, 1313, 2424,
+        3535, 4646, 5757, 6868, 7979, 1414, 2525, 3636, 4747, 5858, 6969, 1515,
+        2626, 3737, 4848, 5959, 1616, 2727, 3838, 4949, 1717, 2828, 3939, 1818,
+        2929, 1919, 2020, 2121,
+      ];
+
+      for (let i = 0; i < unSortedArray.length; i++) {
+        for (let j = 0; j < unSortedArray.length; j++) {
+          if (unSortedArray[j] > unSortedArray[j + 1]) {
+            let temp = unSortedArray[j];
+            unSortedArray[j] = unSortedArray[j + 1];
+            unSortedArray[j + 1] = temp;
+          }
+        }
+      }
+
+      const binarySearch = (array, target) => {
+        let left = 0;
+        let right = array.length - 1;
+
+        while (left <= right) {
+          let mid = Math.floor((left + right) / 2);
+
+          if (array[mid] == target) {
+            return mid;
+          } else if (array[mid] < target) {
+            left = mid + 1;
+          } else {
+            right = mid - 1;
+          }
+        }
+      };
+      let target = 1414;
+      let result = binarySearch(unSortedArray, target);
+
+      if (result != -1) {
+        console.log(`Target ${target} found on index ${result}`);
+      } else {
+        console.log(`Target ${target} not found in array`);
+      }
+
+      console.log(unSortedArray[32]);
+    </script>
+  </body>
+</html>
